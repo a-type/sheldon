@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["es6", "dom", "dom.iterable", "es2017.object"],
+    "baseUrl": "./src/",
+    "paths": {
+      "@/*": ["renderer/*", "main/*", "core/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "typings"]
+}
