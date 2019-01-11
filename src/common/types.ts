@@ -25,3 +25,13 @@ export type Plugin = {
   triggers: string[];
   handleIntent(intent: Intent): Promise<IntentResponse>;
 };
+
+export enum SheldonEventType {
+  TasksChanged = 'tasksChanged',
+}
+
+export enum TaskEventType {
+  Change = 'change',
+  Complete = 'complete',
+  Error = 'error',
+}

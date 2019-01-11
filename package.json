@@ -16,6 +16,7 @@
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "@types/styled-components": "^4.1.5",
     "electron-devtools-installer": "^2.2.4",
     "electron-webpack": "^2.6.1",
     "electron-webpack-ts": "^3.1.0",

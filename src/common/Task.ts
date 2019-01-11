@@ -1,4 +1,4 @@
-import { Intent, IntentResponse } from './types';
+import { Intent, IntentResponse, TaskEventType } from 'common/types';
 import uuid from 'uuid';
 import { EventEmitter } from 'events';
 
@@ -29,18 +29,18 @@ export default class Task extends EventEmitter {
 
   handleIntentOutput = (data: string) => {
     this.textOutput = this.textOutput + data;
-    this.emit('change', this);
+    this.emit(TaskEventType.Change, this);
   };
 
   handleIntentComplete = () => {
     this.completed = true;
-    this.emit('complete', this);
+    this.emit(TaskEventType.Complete, this);
   };
 
   handleIntentFailed = (err: Error) => {
     this.completed = true;
     this.error = err;
-    this.emit('error', this);
+    this.emit(TaskEventType.Error, this);
   };
 
   get title() {

@@ -1,4 +1,4 @@
 import * as React from 'react';
-import Sheldon from '@/Sheldon';
+import Sheldon from 'common/Sheldon';
 
-export default React.createContext(new Sheldon());
+export default React.createContext<Sheldon>(new Sheldon());

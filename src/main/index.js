@@ -3,6 +3,10 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import { format as formatUrl } from 'url';
+const {
+  default: installExtension,
+  REACT_DEVELOPER_TOOLS,
+} = require('electron-devtools-installer');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -13,6 +17,10 @@ function createMainWindow() {
   const window = new BrowserWindow();
 
   if (isDevelopment) {
+    installExtension(REACT_DEVELOPER_TOOLS.id)
+      .then(name => console.log(`Added Extension:  ${name}`))
+      .catch(err => console.log('An error occurred: ', err));
+
     window.webContents.openDevTools();
   }
 

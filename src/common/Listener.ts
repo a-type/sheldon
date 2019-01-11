@@ -1,6 +1,6 @@
-import Task from './Task';
+import Task from 'common/Task';
 import { EventEmitter } from 'events';
-import * as corePlugins from './plugins';
+import * as corePlugins from 'common/plugins';
 
 export default class Listener extends EventEmitter {
   handleInput = async (userInput: string): Promise<Task> => {
